@@ -3,3 +3,14 @@ Can CSRF tokens prevent XSS attacks?
 If the XSS payload requires a valid CSRF token to work, and the attacker can’t guess it, then the attacker can’t easily make a victim run that malicious request. That’s how CSRF token indirectly protects against that reflected XSS exploitation — not the XSS itself.
 Bypassing CSRF token validation
 **Bypassing CSRF token validation**
+Common flaws in CSRF token validation
+
+1. Validation of CSRF token depends on request method
+Some applications correctly validate the token when the request uses the POST method but skip the validation when the GET method is used.
+In this situation, the attacker can switch to the GET method to bypass the validation and deliver a CSRF attack:
+2. Validation of CSRF token depends on token being present
+Some applications correctly validate the token when it is present but skip the validation if the token is omitted.
+In this situation, the attacker can remove the entire parameter containing the token (not just its value) to bypass the validation and deliver a CSRF attack: 
+3.CSRF token is not tied to the user session
+Some applications do not validate that the token belongs to the same session as the user who is making the request. Instead, the application maintains a global pool of tokens that it has issued and accepts any token that appears in this pool.
+In this situation, the attacker can log in to the application using their own account, obtain a valid token, and then feed that token to the victim user in their CSRF attack. 
