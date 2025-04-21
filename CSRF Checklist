@@ -1,0 +1,4 @@
+CSRF: 
+Can CSRF tokens prevent XSS attacks? 
+If the XSS payload requires a valid CSRF token to work, and the attacker can’t guess it, then the attacker can’t easily make a victim run that malicious request. That’s how CSRF token indirectly protects against that reflected XSS exploitation — not the XSS itself.
+Bypassing CSRF token validation
