@@ -14,3 +14,15 @@ In this situation, the attacker can remove the entire parameter containing the t
 3.CSRF token is not tied to the user session
 Some applications do not validate that the token belongs to the same session as the user who is making the request. Instead, the application maintains a global pool of tokens that it has issued and accepts any token that appears in this pool.
 In this situation, the attacker can log in to the application using their own account, obtain a valid token, and then feed that token to the victim user in their CSRF attack. 
+
+** Double Submit Cookie CSRF Prevention Technique?
+Double Submit Cookie is a method to prevent Cross-Site Request Forgery (CSRF) attacks without requiring server-side session storage.
+Basic idea:
+The server sets a cookie with a random CSRF token.
+The client (browser) reads the cookie and sends that same token again inside the request body or header when making a sensitive request.
+The server checks that:
+The CSRF token in the cookie matches the CSRF token in the request body/header.
+If they match → allow the request.
+If they don't match → block the request.
+Why is it called "double submit"?
+Because the same CSRF token is submitted twice: once via cookie and once via request body or header. ( basically we are adding csrf token in cookie and via body or header)
