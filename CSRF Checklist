@@ -26,3 +26,12 @@ If they match → allow the request.
 If they don't match → block the request.
 Why is it called "double submit"?
 Because the same CSRF token is submitted twice: once via cookie and once via request body or header. ( basically we are adding csrf token in cookie and via body or header)
+
+
+If samesite set to lax is set then :
+You can't do cross-site POST + send cookie if SameSite=Lax.
+✅ GET → Cookie goes (allowed under Lax)
+❌ POST → Cookie blocked (under Lax)
+Meaning:
+If you are trying to do a POST-based CSRF attack — and cookies are SameSite=Lax — your attack will fail because the cookie won't be sent, 
+so the server will think you're logged out.
