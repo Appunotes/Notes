@@ -1,1 +1,3 @@
+DOM XSS 
+DOM-based vulnerabilities arise when a website contains JavaScript that takes an attacker-controllable value, known as a source, and passes it into a dangerous function, known as a sink. 
 
