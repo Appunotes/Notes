@@ -1,1 +1,4 @@
-What is the difference between XSS and CSRF? XSS involves causing a web site to return malicious JavaScript, while CSRF involves inducing a victim user to perform actions they do not intend to do. 
+1.What is the difference between XSS and CSRF? 
+XSS involves causing a web site to return malicious JavaScript, while CSRF involves inducing a victim user to perform actions they do not intend to do. 
+2.What is the difference between XSS and SQL injection? 
+XSS is a client-side vulnerability that targets other application users, while SQL injection is a server-side vulnerability that targets the application's database. 
