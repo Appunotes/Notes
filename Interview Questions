@@ -1,4 +1,26 @@
-1.What is the difference between XSS and CSRF? 
+What is the difference between XSS and CSRF? 
 XSS involves causing a web site to return malicious JavaScript, while CSRF involves inducing a victim user to perform actions they do not intend to do. 
-2.What is the difference between XSS and SQL injection? 
+
+What is the difference between XSS and SQL injection? 
 XSS is a client-side vulnerability that targets other application users, while SQL injection is a server-side vulnerability that targets the application's database. 
+
+What are HTTP methods you know?
+GET – Retrieves data.
+
+POST – Submits data.
+
+PUT – Updates existing resource.
+
+DELETE – Deletes a resource.
+
+HEAD – Like GET, but returns headers only.
+
+OPTIONS – Returns allowed HTTP methods.
+
+PATCH – Partially updates a resource.
+
+TRACE – Echoes the received request (used for debugging).
+
+CONNECT – Used to establish a tunnel (typically for SSL).
+
+
