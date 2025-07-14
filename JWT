@@ -1,1 +1,5 @@
+What is JWT Token ?
 
+Test Cases?
+1. Chnge the role id ( unverfified signture)
+2. None Algorithm ( flawed signature verification )
