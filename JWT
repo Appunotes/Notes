@@ -3,6 +3,6 @@ What is JWT Token ?
 Test Cases?
 1. Chnge the role id ( unverfified signture)
 2. None Algorithm ( flawed signature verification )
-3. Brute force jwt token secert key ( using jwt_tool)
-4. jwk header injection ( trying to create new public key where server accept it withour veryfying the public key ) geneerate a new key and embeded it and check the response)
-1  
+3. Brute force jwt token secert key ( using jwt_tool) 
+4. JWK header injection ( trying to create new public key where server accept it withour veryfying the public key ) geneerate a new key and embeded it and check the response)
+5. JKU 
