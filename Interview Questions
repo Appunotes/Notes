@@ -23,4 +23,15 @@ TRACE – Echoes the received request (used for debugging).
 
 CONNECT – Used to establish a tunnel (typically for SSL).
 
+Is CSRF possibale IF content type is set to  application/json?
+When a website accepts data in application/json format, it usually expects that data to come from JavaScript (AJAX requests).
+But browsers have a built-in security rule called the Same-Origin Policy (SOP). 
+This rule blocks one website from sending certain types of requests (like JSON) to another website unless the target site explicitly allows it.
+why is CSRF hard with JSON?
+HTML forms (used in classic CSRF attacks) cannot send JSON data.
+
+JavaScript can send JSON (application/json), but only if the server allows it through CORS.
+By default, most browsers block JavaScript from sending cross-site JSON requests, protecting against CSRF.
+
+
 
